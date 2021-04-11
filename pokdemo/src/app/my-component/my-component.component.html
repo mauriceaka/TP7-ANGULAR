@@ -1,14 +1,30 @@
 <label>formulaire</label>
 <input [(ngModel)]="id">
-<input readonly [(ngModel)]="id" >
+<input readonly [(ngModel)]="id">
+
+
 <BR>
-l'id de mon pokemon est: {{selectedPokeId}}
+<!--l'id de mon pokemon est: {{id}}-->
 <BR>
+Mon pokemon est: {{selectedPokeId}}
+<BR>
+<input [(ngModel)]="searchPokeName">
+<BR>
+
 
 <select [(ngModel)]="selectedPokeId">
-  <option [value]="poke.id" *ngFor="let poke of pokes">{{poke.name}}</option>
+  <option [value]="poke.id"
+  *ngFor="let poke of pokes | filterPokemonPipe:'name':searchPokeName">{{poke.name}}</option>
 </select>
+<button (click)="go()">GO</button>
+<BR>
 
-<ul>
-  <li *ngFor="let pokes of pokes">{{pokes.name}}</li>
-</ul>
+<div *ngIf="pokeDetail">
+
+  <app-pokedetail [detail]="pokeDetail"></app-pokedetail>
+
+</div>
+
+<!--<ul>-->
+<!--  <li *ngFor="let pokes of pokes">{{pokes.name}}</li>-->
+<!--</ul>-->
