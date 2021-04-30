@@ -33,7 +33,7 @@ the drop-down menu displays the selected pokémon, the go button displays its ch
 
 ## Built With
 <li>node is an asynchronous event-driven JavaScript runtime, Node.js is designed to create scalable network applications.
-l<i>Angular is a JavaScript framework for creating web applications, especially single page applications.
+<li>Angular is a JavaScript framework for creating web applications, especially single page applications.
 
 ## Authors
 This project was developed by these students:</br>
